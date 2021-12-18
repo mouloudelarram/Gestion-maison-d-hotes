@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -24,12 +24,23 @@ public class TableAdmin extends ConnectionGMHDB {
     public TableAdmin(){
         super();
     }
-    public void pushTableAdmin(String FirstName, String LastName, String Email, String Phone, String CIN, String Password ) {
+    public void pushTableAdmin(String FirstName, String LastName, String Email, String Phone, String CIN, String Password ) throws Exception{
         try{
             statementAdmin.executeUpdate("INSERT INTO `admin` (`FirstName`, `LastName`, `Username`, `Email`, `Phone`, `CIN`, `Password`, `HireDate`) VALUES\n" +
             "('"+FirstName+"', '"+LastName+"', '"+FirstName.replaceAll("\\s+","")+"."+LastName.replaceAll("\\s+","")+"', '"+Email+"', '"+Phone+"', '"+CIN+"', '"+Password+"', '"+LocalDateTime.now()+"'); ");
         }catch(Exception e){
-            System.out.println("Erreur : "+e);
+            System.out.println("Erreur table admin : "+e);
+            throw new Exception("Sql erreur in Table admin pushTableAdmin function"+e);
+            
+        }
+    }
+    public boolean removeTableAdmin(String username, String CIN){
+        try{
+            statementAdmin.executeUpdate("delete from admin where Username='"+username+"' AND CIN='"+CIN+"'");
+            return true;
+        }catch(Exception e){
+            System.out.println("Erreur Remove table admin :"+e);
+            return false;
         }
     }
     public boolean ChercherData(String Username, String Password){
@@ -39,7 +50,7 @@ public class TableAdmin extends ConnectionGMHDB {
             
             
         }catch(Exception e){
-            System.out.println("Erreur owner  :  " + e);
+            System.out.println("Erreur table admin  :  " + e);
             return false;
         }
     }

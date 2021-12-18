@@ -21,6 +21,8 @@ public class LogIn extends javax.swing.JFrame {
         initComponents();
         setResizable(false);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(HIDE_ON_CLOSE);
+        setVisible(true);
         
     }
 
@@ -33,179 +35,97 @@ public class LogIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Login = new javax.swing.JTabbedPane();
-        Admin = new javax.swing.JPanel();
-        AdminUsernameLabel = new javax.swing.JLabel();
-        AdminUsernameField = new javax.swing.JTextField();
-        AdminPasswordLabel = new javax.swing.JLabel();
-        AdminLoginButton = new javax.swing.JButton();
-        AdminPasswordField = new javax.swing.JPasswordField();
-        Owner = new javax.swing.JPanel();
-        OwnerFirstNameLabel = new javax.swing.JLabel();
-        OwnerFirstNameField = new javax.swing.JTextField();
-        OwnerLastNameLabel = new javax.swing.JLabel();
-        OwnerLastNameField = new javax.swing.JTextField();
-        OwnerPasswordLabel = new javax.swing.JLabel();
-        OwnerLogInButton = new javax.swing.JButton();
-        OwnerPasswordField = new javax.swing.JPasswordField();
+        Admin1 = new javax.swing.JPanel();
+        AdminUsernameLabel1 = new javax.swing.JLabel();
+        AdminUsernameField1 = new javax.swing.JTextField();
+        AdminPasswordLabel1 = new javax.swing.JLabel();
+        AdminLoginButton1 = new javax.swing.JButton();
+        AdminPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Login.setBackground(new java.awt.Color(255, 255, 255));
+        Admin1.setBackground(new java.awt.Color(255, 255, 255));
 
-        Admin.setBackground(new java.awt.Color(255, 255, 255));
+        AdminUsernameLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AdminUsernameLabel1.setText("Username");
 
-        AdminUsernameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AdminUsernameLabel.setText("Username");
-
-        AdminUsernameField.addActionListener(new java.awt.event.ActionListener() {
+        AdminUsernameField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AdminUsernameFieldActionPerformed(evt);
+                AdminUsernameField1ActionPerformed(evt);
             }
         });
 
-        AdminPasswordLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AdminPasswordLabel.setText("Password");
+        AdminPasswordLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AdminPasswordLabel1.setText("Password");
 
-        AdminLoginButton.setText("Log In");
-        AdminLoginButton.addActionListener(new java.awt.event.ActionListener() {
+        AdminLoginButton1.setText("Log In");
+        AdminLoginButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AdminLoginButtonActionPerformed(evt);
+                AdminLoginButton1ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout AdminLayout = new javax.swing.GroupLayout(Admin);
-        Admin.setLayout(AdminLayout);
-        AdminLayout.setHorizontalGroup(
-            AdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdminLayout.createSequentialGroup()
-                .addGap(0, 103, Short.MAX_VALUE)
-                .addGroup(AdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(AdminPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-                    .addComponent(AdminPasswordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(AdminLayout.createSequentialGroup()
-                        .addComponent(AdminLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23))
-                    .addGroup(AdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(AdminUsernameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-                        .addComponent(AdminUsernameField)))
-                .addContainerGap(114, Short.MAX_VALUE))
+        javax.swing.GroupLayout Admin1Layout = new javax.swing.GroupLayout(Admin1);
+        Admin1.setLayout(Admin1Layout);
+        Admin1Layout.setHorizontalGroup(
+            Admin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Admin1Layout.createSequentialGroup()
+                .addGap(0, 107, Short.MAX_VALUE)
+                .addGroup(Admin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(AdminPasswordField1)
+                    .addComponent(AdminPasswordLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AdminUsernameLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AdminUsernameField1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AdminLoginButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
-        AdminLayout.setVerticalGroup(
-            AdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdminLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(AdminUsernameLabel)
+        Admin1Layout.setVerticalGroup(
+            Admin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Admin1Layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addComponent(AdminUsernameLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(AdminUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(AdminUsernameField1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(AdminPasswordLabel)
-                .addGap(18, 18, 18)
-                .addComponent(AdminPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(AdminLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(AdminPasswordLabel1)
+                .addGap(30, 30, 30)
+                .addComponent(AdminPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(AdminLoginButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
-
-        Login.addTab("Admin", Admin);
-
-        Owner.setBackground(new java.awt.Color(255, 255, 255));
-
-        OwnerFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OwnerFirstNameLabel.setText("First Name");
-
-        OwnerLastNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OwnerLastNameLabel.setText("Last Name");
-
-        OwnerPasswordLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OwnerPasswordLabel.setText("Password");
-
-        OwnerLogInButton.setText("Log In");
-        OwnerLogInButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OwnerLogInButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout OwnerLayout = new javax.swing.GroupLayout(Owner);
-        Owner.setLayout(OwnerLayout);
-        OwnerLayout.setHorizontalGroup(
-            OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OwnerLayout.createSequentialGroup()
-                .addGroup(OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(OwnerLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addComponent(OwnerLogInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(OwnerLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addGroup(OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(OwnerFirstNameField)
-                            .addComponent(OwnerLastNameField)
-                            .addComponent(OwnerFirstNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                            .addComponent(OwnerLastNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(OwnerPasswordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(OwnerPasswordField))))
-                .addContainerGap(125, Short.MAX_VALUE))
-        );
-        OwnerLayout.setVerticalGroup(
-            OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OwnerLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(OwnerFirstNameLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(OwnerFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OwnerLastNameLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OwnerLastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(OwnerPasswordLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(OwnerPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(OwnerLogInButton, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        Login.addTab("Owner", Owner);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Login)
+            .addComponent(Admin1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Login)
+            .addComponent(Admin1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AdminLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminLoginButtonActionPerformed
+    private void AdminUsernameField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminUsernameField1ActionPerformed
         // TODO add your handling code here:
-        TableAdmin temp = new TableAdmin();
-        boolean var = temp.ChercherData(AdminUsernameField.getText(), AdminPasswordField.getText());
-        if (var == true)
+    }//GEN-LAST:event_AdminUsernameField1ActionPerformed
+
+    private void AdminLoginButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminLoginButton1ActionPerformed
+        // TODO add your handling code here:
+         TableAdmin temp = new TableAdmin();
+        boolean var = temp.ChercherData(AdminUsernameField1.getText(), AdminPasswordField1.getText());
+        if (var == true){
             JOptionPane.showMessageDialog(null,"Admin conneted");
+             new Home();
+            setVisible(false);
+        }
         else
             JOptionPane.showMessageDialog(null,"Admin Erreur");
-    }//GEN-LAST:event_AdminLoginButtonActionPerformed
-
-    private void AdminUsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminUsernameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AdminUsernameFieldActionPerformed
-
-    private void OwnerLogInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OwnerLogInButtonActionPerformed
-        // TODO add your handling code here:
-        TableOwner temp = new TableOwner();
-        boolean var = temp.ChercherData(OwnerFirstNameField.getText(), OwnerLastNameField.getText(), OwnerPasswordField.getText());
-        if (var == true)
-            JOptionPane.showMessageDialog(null,"conneted");
-        else
-            JOptionPane.showMessageDialog(null,"Erreur");
-    }//GEN-LAST:event_OwnerLogInButtonActionPerformed
+       
+    }//GEN-LAST:event_AdminLoginButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,20 +163,11 @@ public class LogIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Admin;
-    private javax.swing.JButton AdminLoginButton;
-    private javax.swing.JPasswordField AdminPasswordField;
-    private javax.swing.JLabel AdminPasswordLabel;
-    private javax.swing.JTextField AdminUsernameField;
-    private javax.swing.JLabel AdminUsernameLabel;
-    private javax.swing.JTabbedPane Login;
-    private javax.swing.JPanel Owner;
-    private javax.swing.JTextField OwnerFirstNameField;
-    private javax.swing.JLabel OwnerFirstNameLabel;
-    private javax.swing.JTextField OwnerLastNameField;
-    private javax.swing.JLabel OwnerLastNameLabel;
-    private javax.swing.JButton OwnerLogInButton;
-    private javax.swing.JPasswordField OwnerPasswordField;
-    private javax.swing.JLabel OwnerPasswordLabel;
+    private javax.swing.JPanel Admin1;
+    private javax.swing.JButton AdminLoginButton1;
+    private javax.swing.JPasswordField AdminPasswordField1;
+    private javax.swing.JLabel AdminPasswordLabel1;
+    private javax.swing.JTextField AdminUsernameField1;
+    private javax.swing.JLabel AdminUsernameLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -23,7 +23,7 @@ public class TableOwner extends ConnectionGMHDB {
             
             
         }catch(Exception e){
-            System.out.println("Erreur owner  :  " + e);
+            System.out.println("Erreur table owner  :  " + e);
             return false;
         }
     }
