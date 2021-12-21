@@ -23,17 +23,18 @@ public class TableClient extends ConnectionGMHDB {
     public TableClient(){
         super();
     }
-    public void pushTableClient(String FirstName, String LastName, String Email, String Phone, String CIN ) {
+    public void pushTableClient(String FirstName, String LastName, String Email, String Phone, String CIN , int idoffre) throws Exception {
         try{
-            statementAdmin.executeUpdate("INSERT INTO `client` (`FirstName`, `LastName`, `Email`, `Phone`, `CIN`) VALUES\n" +
-            "('"+FirstName+"', '"+LastName+"','"+Email+"', '"+Phone+"', '"+CIN+"'); ");
+            statementAdmin.executeUpdate("INSERT INTO `client` (`FirstName`, `LastName`, `Email`, `Phone`, `CIN`, `ID_OFFER`) VALUES\n" +
+            "('"+FirstName+"', '"+LastName+"','"+Email+"', '"+Phone+"', '"+CIN+"','"+idoffre+"'); ");
         }catch(Exception e){
             System.out.println("Erreur table client : "+e);
+            throw new Exception("erreur in push data client");
         }
     }
     public ResultSet getTableClient(){
         try{
-            ResultAdmin = statementAdmin.executeQuery("SELECT FirstName, LastName, Email, Phone, CIN from client");
+            ResultAdmin = statementAdmin.executeQuery("SELECT FirstName, LastName, Email, Phone, CIN, ID_OFFER, label from client, offre where ID_OFFER = IdOffre and client.status = true");
             return ResultAdmin;
         }catch(Exception e){
             System.out.println("erreur get datas client :"+e);
@@ -42,13 +43,40 @@ public class TableClient extends ConnectionGMHDB {
     } 
     public ResultSet ChercherData(String str){
         try{
-            ResultAdmin = statementAdmin.executeQuery("SELECT FirstName, LastName, Email, Phone, CIN  FROM client WHERE FirstName = '"+str+"' or LastName = '"+str+"' or CIN = '"+str+"';");
+            ResultAdmin = statementAdmin.executeQuery("SELECT FirstName, LastName, Email, Phone, CIN, ID_OFFER, label  FROM client, offre WHERE (FirstName = '"+str+"' or LastName = '"+str+"' or CIN = '"+str+"') and ID_OFFER = IdOffre;");
             return ResultAdmin;
             
             
         }catch(Exception e){
             System.out.println("Erreur table client  :  " + e);
             return null;
+        }
+    }
+    public boolean ChnageStatusTableClinet(String CIN){
+        try{
+            statementAdmin.executeUpdate("UPDATE client set status = !status where CIN='"+CIN+"'");
+            return true;
+        }catch(Exception e){
+            System.out.println("erreur table client :"+e);
+            return false;
+        }
+    }
+    public boolean ChangeOffreTableClient(String CIN, int Idoffre){
+        try{
+            statementAdmin.executeUpdate("UPDATE client set ID_OFFER='"+Idoffre+"' where CIN='"+CIN+"'");
+            return true;
+        }catch(Exception e){
+            System.out.println("erreur table client :"+e);
+            return false;
+        }
+    }
+    public boolean ChangeOffreTableClient(int Idoffre){
+        try{
+            statementAdmin.executeUpdate("UPDATE client set status = false where status = true AND ID_OFFER='"+Idoffre+"'");
+            return true;
+        }catch(Exception e){
+            System.out.println("erreur table client :"+e);
+            return false;
         }
     }
 }

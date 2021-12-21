@@ -41,19 +41,20 @@ public class LogInOwner extends javax.swing.JFrame {
         OwnerPasswordLabel = new javax.swing.JLabel();
         OwnerLogInButton = new javax.swing.JButton();
         OwnerPasswordField = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Owner.setBackground(new java.awt.Color(255, 255, 255));
 
         OwnerFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OwnerFirstNameLabel.setText("First Name");
+        OwnerFirstNameLabel.setText("Owner First Name");
 
         OwnerLastNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OwnerLastNameLabel.setText("Last Name");
+        OwnerLastNameLabel.setText("Owner Last Name");
 
         OwnerPasswordLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OwnerPasswordLabel.setText("Password");
+        OwnerPasswordLabel.setText("Owner Password");
 
         OwnerLogInButton.setText("Log In");
         OwnerLogInButton.addActionListener(new java.awt.event.ActionListener() {
@@ -62,30 +63,36 @@ public class LogInOwner extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jLabel1.setText("Log In Page for Owner");
+
         javax.swing.GroupLayout OwnerLayout = new javax.swing.GroupLayout(Owner);
         Owner.setLayout(OwnerLayout);
         OwnerLayout.setHorizontalGroup(
             OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OwnerLayout.createSequentialGroup()
-                .addGroup(OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(OwnerLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addComponent(OwnerLogInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(OwnerLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
+                .addGap(82, 82, 82)
+                .addGroup(OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(OwnerLayout.createSequentialGroup()
+                            .addGap(32, 32, 32)
+                            .addComponent(OwnerLogInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(OwnerFirstNameField)
                             .addComponent(OwnerLastNameField)
-                            .addComponent(OwnerFirstNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(OwnerFirstNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(OwnerLastNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(OwnerPasswordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(OwnerPasswordField))))
-                .addContainerGap(137, Short.MAX_VALUE))
+                            .addComponent(OwnerPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel1))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         OwnerLayout.setVerticalGroup(
             OwnerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OwnerLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OwnerLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(OwnerFirstNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(OwnerFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -98,23 +105,27 @@ public class LogInOwner extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(OwnerPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(OwnerLogInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addComponent(OwnerLogInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 407, Short.MAX_VALUE)
+            .addGap(0, 343, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(Owner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(Owner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 371, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(Owner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(Owner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -177,5 +188,6 @@ public class LogInOwner extends javax.swing.JFrame {
     private javax.swing.JButton OwnerLogInButton;
     private javax.swing.JPasswordField OwnerPasswordField;
     private javax.swing.JLabel OwnerPasswordLabel;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

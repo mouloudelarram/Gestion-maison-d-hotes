@@ -44,22 +44,25 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="107" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="AdminPasswordField1" alignment="1" max="32767" attributes="0"/>
                       <Component id="AdminPasswordLabel1" alignment="1" min="-2" pref="170" max="-2" attributes="0"/>
                       <Component id="AdminUsernameLabel1" alignment="0" max="32767" attributes="0"/>
                       <Component id="AdminUsernameField1" alignment="0" max="32767" attributes="0"/>
                       <Component id="AdminLoginButton1" pref="178" max="32767" attributes="0"/>
+                      <Component id="jLabel1" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="122" max="32767" attributes="0"/>
+                  <EmptySpace pref="89" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="29" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="51" max="32767" attributes="0"/>
                   <Component id="AdminUsernameLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="AdminUsernameField1" min="-2" pref="36" max="-2" attributes="0"/>
@@ -78,7 +81,7 @@
         <Component class="javax.swing.JLabel" name="AdminUsernameLabel1">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Username"/>
+            <Property name="text" type="java.lang.String" value="Admin Username"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="AdminUsernameField1">
@@ -89,7 +92,7 @@
         <Component class="javax.swing.JLabel" name="AdminPasswordLabel1">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Password"/>
+            <Property name="text" type="java.lang.String" value="Admin Password"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="AdminLoginButton1">
@@ -101,6 +104,14 @@
           </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="AdminPasswordField1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Sylfaen" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Log In Page for Admin"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

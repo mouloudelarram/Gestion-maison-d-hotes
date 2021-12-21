@@ -41,13 +41,14 @@ public class LogIn extends javax.swing.JFrame {
         AdminPasswordLabel1 = new javax.swing.JLabel();
         AdminLoginButton1 = new javax.swing.JButton();
         AdminPasswordField1 = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Admin1.setBackground(new java.awt.Color(255, 255, 255));
 
         AdminUsernameLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AdminUsernameLabel1.setText("Username");
+        AdminUsernameLabel1.setText("Admin Username");
 
         AdminUsernameField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,7 +57,7 @@ public class LogIn extends javax.swing.JFrame {
         });
 
         AdminPasswordLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AdminPasswordLabel1.setText("Password");
+        AdminPasswordLabel1.setText("Admin Password");
 
         AdminLoginButton1.setText("Log In");
         AdminLoginButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,24 +66,30 @@ public class LogIn extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Sylfaen", 0, 18)); // NOI18N
+        jLabel1.setText("Log In Page for Admin");
+
         javax.swing.GroupLayout Admin1Layout = new javax.swing.GroupLayout(Admin1);
         Admin1.setLayout(Admin1Layout);
         Admin1Layout.setHorizontalGroup(
             Admin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Admin1Layout.createSequentialGroup()
-                .addGap(0, 107, Short.MAX_VALUE)
+                .addGap(0, 75, Short.MAX_VALUE)
                 .addGroup(Admin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(AdminPasswordField1)
                     .addComponent(AdminPasswordLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AdminUsernameLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(AdminUsernameField1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(AdminLoginButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
-                .addContainerGap(122, Short.MAX_VALUE))
+                    .addComponent(AdminLoginButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         Admin1Layout.setVerticalGroup(
             Admin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Admin1Layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(AdminUsernameLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(AdminUsernameField1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -169,5 +176,6 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel AdminPasswordLabel1;
     private javax.swing.JTextField AdminUsernameField1;
     private javax.swing.JLabel AdminUsernameLabel1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
